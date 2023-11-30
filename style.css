@@ -318,6 +318,10 @@ li {
     .dual {
         width: 90%;
     }
+
+    .container{
+        padding: 3%;
+    }
 }
 
 .item {

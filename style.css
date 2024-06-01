@@ -363,7 +363,95 @@ img {
     transform: translateX(10px);
 }
 
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
 
+.member-photo {
+    flex: 1;
+    max-width: 250px;
+    margin-right: 2rem;
+}
+
+.member-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.member-info {
+    flex: 2;
+    color: #FFFFFF;
+}
+
+.member-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #C5C6C7;
+    /* Highlight color for name */
+}
+
+.member-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #a4522f;
+    /* Highlight color for title */
+}
+
+.member-info p {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0.75, 0.75, 0.75, 0.15);
+    backdrop-filter: blur(30px);
+    padding: 2rem;
+    border-radius: 1.3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    color: #fff;
+}
+
+.input-style {
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+textarea.input-style {
+    height: 100px;
+    resize: none;
+}
+
+.btn-submit {
+    background-color: #a4522f;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.2rem;
+    width: 100%;
+    max-width: 10rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #863c29;
+}
 
 
 .footer {

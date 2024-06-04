@@ -112,6 +112,8 @@ p {
     background-color: rgba(255, 255, 255, 0.0);
     padding-top: 5vh;
     max-width: 120rem;
+    min-width: 60%;
+    align-self: center;
 }
 
 .dual {
@@ -322,6 +324,22 @@ li {
     .container{
         padding: 3%;
     }
+
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .member-photo {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .member-info {
+        margin-left: 0;
+    }
 }
 
 .item {
@@ -366,7 +384,10 @@ img {
 .team-member {
     display: flex;
     align-items: center;
+    align-self: center;
+    justify-content: center;
     margin-bottom: 2rem;
+    max-width: 70rem;
 }
 
 .member-photo {

@@ -197,6 +197,33 @@ h1 {
     color: #FFFFFF;
 }
 
+h2 {
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 400;
+    /* max-width: 60rem; */
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33); */
+}
+
+.lava-text {
+    /* font-family: Arial, sans-serif; */
+    /* font-size: 72px; */
+    font-weight: bold;
+    background: linear-gradient(to right,
+            #ff4500, #ff6a00, #ff8c00, #ffa500, #ff4500);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: lava-flow 10s linear infinite;
+}
+
+@keyframes lava-flow {
+    to {
+        background-position: 200% center;
+    }
+}
+
 .subtitle {
     display: flex;
     text-align: stretch;

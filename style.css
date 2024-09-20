@@ -803,3 +803,47 @@ blockquote {
         flex-wrap: wrap;
     }
 }
+
+.cc-window {
+    width: 100%;
+    /* Full width of the screen */
+    /* max-width: 600px; */
+    /* Limit the maximum width of the banner */
+    text-align: center;
+    /* Center text and buttons horizontally */
+    display: flex;
+    /* Use flexbox for centering */
+    flex-direction: column;
+    /* Stack the elements vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    padding: 1rem;
+    /* Add padding */
+    position: fixed;
+    /* Fix the banner at the bottom */
+    bottom: 0;
+    /* Stick the banner to the bottom */
+    /* left: 50%; */
+    /* Center horizontally */
+    /* transform: translateX(-50%); */
+    /* Properly center the banner */
+    background-color: #0B0C10;
+    margin: auto;
+    /* Ensure the background is consistent */
+}
+
+.cc-message {
+    /* Limit the width of the message text */
+    max-width: 50%;
+    /* margin-bottom: 1rem; */
+    /* Add space below the message */
+}
+
+.cc-btn {
+    margin: 0.5rem;
+    /* Add space between buttons */
+    padding: 0.8rem 1.5rem;
+    /* Adjust padding for better button sizing */
+}

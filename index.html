@@ -21,14 +21,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300&display=swap"
         rel="stylesheet">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9DMF2SQTV"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9DMF2SQTV"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-R9DMF2SQTV');
-    </script>
+    </script> -->
     <!-- <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"> -->
     <link rel="icon" type="image/svg+xml" href="https://askan.is/assets/favicon.svg">
     <!-- <link rel="icon" type="image/png" href="assets/favicon/favicon.png"> -->
@@ -235,6 +235,7 @@
     <script>
         AOS.init();
     </script>
+    <!-- Cookie Consent Banner and Google Tag Integration -->
     <script>
         window.addEventListener("load", function () {
             window.cookieconsent.initialise({
@@ -251,23 +252,22 @@
                 "theme": "classic",
                 "type": "opt-in",  // Requires explicit consent before running Google Analytics
                 "content": {
-                    "message": "This website uses cookies to analyze traffic with Google Analytics.",
+                    "message": "We use cookies and similar technologies to deliver and improve our services.",
                     "dismiss": "Got it!",
                     "allow": "Allow cookies",
                     "deny": "Decline",
-                    "link": "Learn more",
-                    "href": "https://www.yourwebsite.com/privacy-policy" // Update with your privacy policy link
+                    "link": "Learn more.",
+                    "href": "privacy-policy.html" // Update with your privacy policy link
                 },
                 "elements": {
-                    "messagelink": "<span id='cookieconsent:desc' class='cc-message'>{{message}} <a aria-label='learn more about cookies' tabindex='0' href='{{href}}' target='_blank' class='cc-link'>{{link}}</a></span>",
-                    "dismiss": "<a aria-label='dismiss cookie message' tabindex='0' class='cc-btn cc-dismiss btn-primary' style='border-radius: 20px;'>{{dismiss}}</a>",
-                    "allow": "<a aria-label='allow cookies' tabindex='0' class='cc-btn cc-allow' style='border-radius: 20px;'>{{allow}}</a>",
-                    "deny": "<a aria-label='deny cookies' tabindex='0' class='cc-btn cc-deny' style='border-radius: 20px;'>{{deny}}</a>"
+                    "messagelink": "<span id='cookieconsent:desc' style='text-align: center; font-size: 12px;' class='cc-message'>{{message}} <a aria-label='learn more about cookies' tabindex='0' href='{{href}}' target='_blank' class='cc-link'>{{link}}</a></span>",
+                    "dismiss": "<a aria-label='dismiss cookie message' tabindex='0' class='cc-btn cc-dismiss btn-primary' style='border-radius: 20px; font-size:10px;'>{{dismiss}}</a>",
+                    "allow": "<a aria-label='allow cookies' tabindex='0' class='cc-btn cc-allow' style='border-radius: 20px; font-size:10px;'>{{allow}}</a>",
+                    "deny": "<a aria-label='deny cookies' tabindex='0' class='cc-btn cc-deny' style='border-radius: 20px; font-size:10px;'>{{deny}}</a>"
                 },
                 "onInitialise": function (status) {
-                    var type = this.options.type;
                     var didConsent = this.hasConsented();
-                    if (type === 'opt-in' && didConsent) {
+                    if (didConsent) {
                         loadGoogleAnalytics();  // Load Google Analytics if consent is given
                     }
                 },
@@ -280,23 +280,24 @@
             });
         });
 
-        // Google Analytics script (only loads if consent is given)
+        // Load Google Analytics (gtag.js) only if user consents
         function loadGoogleAnalytics() {
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            // Google Tag Manager Script
+            var gtagScript = document.createElement('script');
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-R9DMF2SQTV";  // Replace with your GA ID
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
 
-            ga('create', 'YOUR-GA-CODE', 'auto');  // Replace 'YOUR-GA-CODE' with your Google Analytics code
-            ga('send', 'pageview');
+            // Initialize Google Analytics after loading the script
+            gtagScript.onload = function () {
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-R9DMF2SQTV');  // Replace with your GA ID
+            };
         }
     </script>
+
 
 
 </body>

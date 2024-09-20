@@ -17,6 +17,8 @@ html {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
+            box-sizing: border-box;
+            /* Ensure padding and borders are included in width */
 }
 
 ::-webkit-scrollbar {
@@ -24,7 +26,7 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: auto;
     min-height: 100%;
     background-color: #0B0C10;
     display: flex;
@@ -44,6 +46,24 @@ p {
     font-size: 1.3rem;
     color: #FFFFFF;
     /* max-width: 60rem; */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+sub {
+    font-size: 0.9rem;
+    color: #ccc;
+    font-family: 'Lora', serif;
+    border: 1px solid #ccc;
+    /* Thin border */
+    border-radius: 4px;
+    /* Rounded edges */
+    padding: 2px 4px;
+    /* Padding around the text for spacing */
+    display: inline-block;
+    /* Ensure it wraps around the text properly without expanding */
+    max-width: max-content;
+    /* Ensure the element width is as small as possible */
+    margin-bottom: 0.5rem;
 }
 
 /* DEBUG */
@@ -64,6 +84,8 @@ p {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.0);
     width: 100%;
+    max-width: 150rem;
+    margin: 0 auto;
 }
 
 .nav-item {
@@ -111,7 +133,7 @@ p {
     position: relative;
     background-color: rgba(255, 255, 255, 0.0);
     padding-top: 5vh;
-    max-width: 120rem;
+    max-width: 150rem;
     min-width: 60%;
     align-self: center;
 }
@@ -119,8 +141,8 @@ p {
 .dual {
     display: flex;
     /* align-items: center; */
-    flex-wrap: wrap;
-    width: 80%;
+    flex-wrap: nowrap;
+    width: 90%;
     /* margin: 10px; */
 }
 
@@ -195,19 +217,20 @@ h1 {
 
 .container {
     display: flex;
-    /* flex: 1 1 auto; */
-    flex: 45%;
+    flex: 1 1 auto;
+    /* flex: 45%; */
     /* max-height: 60vh; */
     min-height: 25rem;
     border-radius: 2rem;
     padding: 10%;
     z-index: 1001;
-    width: 80%;
-    min-width: 20rem;
+    width: 100%;
+    /* height: 100%; */
+    /* min-width: 10rem; */
     padding: 30px;
     padding-left: 4rem;
     padding-right: 4rem;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     margin: 10px;
     box-sizing: border-box;
     transition: background-color 1s ease;
@@ -221,13 +244,27 @@ h1 {
     flex-direction: column;
     align-items: left;
     align-content: center;
-    justify-content: center;
-    /* flex-grow: 1; */
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-top: 3%;
 }
 
 .odd {
     background-color: rgba(0.75, 0.75, 0.75, .15);
     -webkit-backdrop-filter: blur(30px);
+}
+
+/* New classes for precise sizing */
+.flex-1-3 {
+    flex: 0 0 calc(33.333% - 20px);
+    /* Subtracting margin */
+    width: calc(33.333% - 20px);
+}
+
+.flex-2-3 {
+    flex: 0 0 calc(66.666% - 20px);
+    /* Subtracting margin */
+    width: calc(66.666% - 20px);
 }
 
 .bgimage {
@@ -300,10 +337,22 @@ li {
 
 @media (max-width: 48em) {
     .nav-list {
-        flex-direction: column;
-        margin-left: auto;
-        align-items: flex-end
-    }
+            flex-direction: column;
+            /* Stack items vertically */
+            width: 100%;
+            /* Ensures full width for smaller screens */
+            margin: 0;
+            /* Resets the auto margin */
+            align-items: flex-end;
+            /* Align items to the left */
+        }
+    
+        .nav-item {
+            margin-left: 0.1rem;
+            /* Reset margin to prevent extra space */
+            margin-bottom: 0.1rem;
+            /* Add some spacing between items */
+        }
 
     .flex-grid-thirds {
         display: flex;
@@ -462,7 +511,9 @@ textarea.input-style {
     cursor: pointer;
     transition: background 0.3s ease;
     border: none;
-    border-radius: 5px;
+    text-decoration: none;
+        /* Removes the underline */
+    border-radius: 20px;
     padding: 0.8rem 1.2rem;
     width: 100%;
     max-width: 10rem;
@@ -474,6 +525,35 @@ textarea.input-style {
     background-color: #863c29;
 }
 
+/* container for two buttons side by side in flexbox */
+.btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-soft {
+    background-color: transparent;
+    /* Set background to transparent */
+    color: #E2F6F8;
+    /* Match font color to the border */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: 2px solid #E2F6F8;
+    /* Specify the border color and thickness */
+    text-decoration: none;
+    /* Removes the underline */
+    border-radius: 20px;
+    padding: 0.8rem 1.2rem;
+    width: 100%;
+    max-width: 10rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.btn-soft:hover {
+    background-color: #a4522f;
+}
 
 .footer {
     display: flex;
@@ -696,4 +776,30 @@ textarea.input-style {
     /* Tomato color */
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
     z-index: -1;
+}
+
+blockquote {
+    color: #ccc;
+}
+
+@media (max-width: 56em) {
+    .dual {
+        flex-direction: column;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .dual .container,
+    .dual .bgimage {
+        width: 100%;
+        padding: 2rem 2;
+    }
+}
+
+@media (max-width: 70em) {
+    .dual {
+        flex-wrap: wrap;
+    }
 }

@@ -34,6 +34,11 @@
     <!-- <link rel="icon" type="image/png" href="assets/favicon/favicon.png"> -->
     <meta name="msapplication-TileColor" content="#0B0C10">
     <meta name="theme-color" content="#0B0C10">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
 </head>
 
 
@@ -41,7 +46,7 @@
     <nav>
         <ul class="nav-list">
             <li class="nav-item">
-                <a href="index.html" class="k01">
+                <a href="index.html" class="k01 active">
                     𝌭 Askan
                 </a>
             </li>
@@ -54,6 +59,9 @@
             <li class="nav-item">
                 <a href="product.html">Product</a>
             </li>
+            <!-- <li class="nav-item">
+                <a href="consulting.html">Consulting</a>
+            </li> -->
             <li class="nav-item">
                 <a href="request.html">Request access</a>
             </li>
@@ -88,17 +96,25 @@
                 Askan</h1>
             <!-- <div class="suffix">PhD MRes MEng ACGI</div> -->
             <!-- <h1 class="logo">K01</h1> -->
-            <p>At Askan, we're redefining regulatory compliance through AI-driven solutions. 
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">At Askan, we're redefining regulatory compliance through AI-driven solutions. 
                 <br><br>Led by a team of PhDs from Imperial College London, our tools provide proactive
             horizon scanning, ensuring your business stays ahead of regulatory changes and risks.
             </p>
+            <div class="btn-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <a href="request.html">
+                <button type="submit" class="btn-soft">Request access</button>
+            </a>
+            <a href="request.html">
+                <button type="submit" class="btn-soft">Learn more</button>
+            </a>
+            </div>
         </div>
 
         <!-- <div class="vertical container" id="About">
         
       </div> -->
 
-            <div class="dual">
+            <div class="dual" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <div class="vertical container" id="About">
                     <div class="right subtitle">Our work</div>
                     <p>We specialize in creating AI-driven regulatory compliance solutions tailored for the finance sector. Our innovative
@@ -126,8 +142,8 @@
                 </div>
             </div> -->
 
-        <div class="dual">
-            <div class="vertical container odd" id="Team">
+        <div class="dual" id="Team" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="vertical container odd">
                 <div class="subtitle">Team</div>
                 <div class="team-member">
                     <div class="member-photo">
@@ -136,9 +152,9 @@
                     <div class="member-info">
                         <h3>Dr. Arinbjörn Kolbeinsson</h3>
                         <h4>Co-founder</h4>
-                        <p>A machine learning expert with a PhD from Imperial College London. Experience includes Evidation Health, Samsung AI and a visiting scholar position at the University of
-                        Virginia. He has published over 20 academic papers
-                        and now studies law at the University of Iceland in his spare time.</p>
+                        <p>A machine learning expert with a PhD in deep learning from Imperial College London, with experience at Evidation Health, Samsung AI, and
+                        as a visiting scholar at the University of Virginia. He has published over 20 academic papers and holds a BA in law from
+                        the University of Iceland, solidifying his dual expertise in AI and law.</p>
                     </div>
                 </div>
                 <div class="team-member">
@@ -148,8 +164,9 @@
                     <div class="member-info">
                         <h3>Benedikt Kolbeinsson</h3>
                         <h4>Co-founder</h4>
-                        <p> A final-year PhD student at Imperial College London. Benedikt lead Imperial’s team to victory in Huawei’s AI competition. His experience includes working as a research scientist at Deepair and for the Icelandic COVID-19
-                            Vaccine Taskforce and he previously interned at LOGOS legal services.</p>
+                        <p> A final-year PhD student at Imperial College London. Benedikt lead Imperial’s team to victory in Huawei’s AI competition. His experience includes working as a research scientist at Deepair and contributing to the Icelandic COVID-19 Vaccine
+                        Taskforce. With a strong background in both AI and legal services from his internship at LOGOS legal, Benedikt combines
+                        technical expertise with a practical understanding of the legal industry’s challenges.</p>
                     </div>
                 </div>
             </div>
@@ -158,12 +175,13 @@
 
 
         <div class="dual">
-            <div class="vertical container odd" id="Art">
-                <div class="subtitle">Navigating Regulations with AI</div>
+            <div class="vertical container odd" id="Art" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <sub>Product</sub>
+                <div class="subtitle">Askan Intelligence</div>
                 <p>Streamline complex regulatory landscapes with our advanced AI solutions. Achieve seamless compliance, minimize
-                operational risks, and stay ahead of regulatory changes with ease.</p>
+                operational risks and stay ahead of regulatory changes with ease.</p>
             </div>
-            <div class="vertical container odd bgimage img2">
+            <div class="vertical container odd bgimage img2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="subtitle"></div>
                 <!-- <p>My work focuses on developing machine learning methods that learn from high-dimensional biomedical data including genetic,
                   brain MRI and hospital diagnosis data for personalised health outcome prediction.</p> -->
@@ -172,28 +190,30 @@
         </div>
 
         <div class="dual">
-            <div class="vertical container odd" id="Art">
-                <div class="subtitle">Compliance Co-pilot</div>
-                <p>Revolutionize your compliance strategy with our co-pilot. Enhance customer experiences while ensuring top-tier
-                regulatory adherence.</p>
+            <div class="vertical container odd" id="Art" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <sub>Product</sub>
+                <div class="subtitle">Horizon</div>
+                <p>Horizon scans the regulatory landscape, using Askan’s proprietary AI models to monitor and analyze upcoming changes.
+                Tailored alerts keep your firm ahead of compliance challenges, making adherence effortless.</p>
                 <a href="product.html"><button class="btn-submit">Learn more</button></a>
             </div>
-            <div class="vertical container odd">
-                <div class="subtitle">Insights across sectors</div>
-                <!-- <p>My work focuses on developing machine learning methods that learn from high-dimensional biomedical data including genetic,
-                          brain MRI and hospital diagnosis data for personalised health outcome prediction.</p> -->
-        
-                <p>Unlock transformative insights with AI-driven compliance solutions tailored for diverse sectors. Maintain a competitive
-                edge and ensure strategic, compliant operations in a rapidly evolving market.</p>
+            <div class="vertical container odd" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <sub>Research</sub>
+                <div class="subtitle">Driving Innovation in AI+Law</div>
+                <p>At Askan, our research pushes the boundaries of AI in the legal sector. We are shaping the future of AI-driven legal solutions through cutting-edge studies and real-world
+                    applications.</p>
+                <a href="research.html">
+                    <button type="button" class="btn-submit">Our Research</button>
+                </a>
             </div>
         </div>
 
         <div class="dual">
-            <div class="vertical container odd bgimage" id="Art">
+            <div class="vertical container odd bgimage" id="Art" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="subtitle"></div>
   
             </div>
-            <div class="vertical container odd">
+            <div class="vertical container odd" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="subtitle">Get Started</div>
                 <!-- <ul> -->
                     <!-- <li> -->
@@ -212,6 +232,73 @@
     <div class="footer">
         <p class="footer-font">Copyright &copy; 2024 Askan. All rights reserved.</p>
     </div>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#0B0C10",  // Matches the website's dark background color
+                        "text": "#C5C6C7"         // Matches the light text color used in your design
+                    },
+                    "button": {
+                        "background": "#a4522f",  // Matches the button color on your site
+                        "text": "#ffffff"         // White text for readability on button
+                    }
+                },
+                "theme": "classic",
+                "type": "opt-in",  // Requires explicit consent before running Google Analytics
+                "content": {
+                    "message": "This website uses cookies to analyze traffic with Google Analytics.",
+                    "dismiss": "Got it!",
+                    "allow": "Allow cookies",
+                    "deny": "Decline",
+                    "link": "Learn more",
+                    "href": "https://www.yourwebsite.com/privacy-policy" // Update with your privacy policy link
+                },
+                "elements": {
+                    "messagelink": "<span id='cookieconsent:desc' class='cc-message'>{{message}} <a aria-label='learn more about cookies' tabindex='0' href='{{href}}' target='_blank' class='cc-link'>{{link}}</a></span>",
+                    "dismiss": "<a aria-label='dismiss cookie message' tabindex='0' class='cc-btn cc-dismiss btn-primary' style='border-radius: 20px;'>{{dismiss}}</a>",
+                    "allow": "<a aria-label='allow cookies' tabindex='0' class='cc-btn cc-allow' style='border-radius: 20px;'>{{allow}}</a>",
+                    "deny": "<a aria-label='deny cookies' tabindex='0' class='cc-btn cc-deny' style='border-radius: 20px;'>{{deny}}</a>"
+                },
+                "onInitialise": function (status) {
+                    var type = this.options.type;
+                    var didConsent = this.hasConsented();
+                    if (type === 'opt-in' && didConsent) {
+                        loadGoogleAnalytics();  // Load Google Analytics if consent is given
+                    }
+                },
+                "onStatusChange": function (status, chosenBefore) {
+                    var didConsent = this.hasConsented();
+                    if (didConsent) {
+                        loadGoogleAnalytics();  // Load Google Analytics when consent is granted
+                    }
+                }
+            });
+        });
+
+        // Google Analytics script (only loads if consent is given)
+        function loadGoogleAnalytics() {
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'YOUR-GA-CODE', 'auto');  // Replace 'YOUR-GA-CODE' with your Google Analytics code
+            ga('send', 'pageview');
+        }
+    </script>
+
+
 </body>
 
 </html>

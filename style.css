@@ -206,16 +206,15 @@ h2 {
 }
 
 .lava-text {
-    /* font-family: Arial, sans-serif; */
-    /* font-size: 72px; */
     font-weight: bold;
     background: linear-gradient(to right,
-            #ff4500, #ff6a00, #ff8c00, #ffa500, #ff4500);
+            #d97745, #e87e4b, #f08c5a, #f5a068, #f4b27a, #d97745);
     background-size: 200% auto;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
     animation: lava-flow 10s linear infinite;
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33); */
 }
 
 @keyframes lava-flow {
@@ -612,7 +611,8 @@ textarea.input-style {
 }
 
 .gradient-body {
-    background-color: #E2F6F8;
+    /* background-color: #E2F6F8; */
+    background-color: rgba(226, 246, 248, 0.6);
     position: absolute;
     inset: 0;
     display: flex;

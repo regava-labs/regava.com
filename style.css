@@ -486,7 +486,7 @@ img {
 .member-info h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: #C5C6C7;
+    color: #ddd;
     /* Highlight color for name */
 }
 
@@ -500,6 +500,7 @@ img {
 .member-info p {
     margin-top: 1rem;
     font-size: 1rem;
+    font-weight: 500;
 }
 
 form {
@@ -531,6 +532,13 @@ textarea.input-style {
     resize: none;
 }
 
+/* Ensure that the <a> tag wraps tightly around the button */
+.btn-link {
+    display: inline-block;
+    width: fit-content;
+    /* This ensures the anchor takes only as much width as its content */
+}
+
 .btn-submit {
     background-color: #a4522f;
     color: white;
@@ -538,13 +546,14 @@ textarea.input-style {
     transition: background 0.3s ease;
     border: none;
     text-decoration: none;
-        /* Removes the underline */
     border-radius: 20px;
     padding: 0.8rem 1.2rem;
     width: 100%;
     max-width: 10rem;
     margin-top: 1rem;
     font-size: 1rem;
+    display: inline-block;
+    /* Add this line */
 }
 
 .btn-submit:hover {

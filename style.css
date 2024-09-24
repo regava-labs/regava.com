@@ -197,12 +197,38 @@ h1 {
     color: #FFFFFF;
 }
 
-h2 {
+.logo-text {
     font-size: 1.7rem;
     color: #fff;
     font-weight: 400;
     /* max-width: 60rem; */
     /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33); */
+}
+
+/* h2 {
+    font-family: 'Avenir',
+        'Source Sans Pro',
+        sans-serif;
+    font-weight: 50;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #FFFFFF;
+} */
+
+h2, .subtitle {
+    display: flex;
+    text-align: stretch;
+    /* flex: 0 1 15%; */
+    z-index: 1001;
+    min-height: 5vh;
+    max-width: 60rem;
+    width: 100%;
+    font-family: 'Avenir', 'Source Serif 4', serif;
+    /* text-decoration: underline; */
+    font-size: 2.5rem;
+    color: #eee;
+    font-weight: 400;
+    margin: 0;
 }
 
 .lava-text {
@@ -221,20 +247,6 @@ h2 {
     to {
         background-position: 200% center;
     }
-}
-
-.subtitle {
-    display: flex;
-    text-align: stretch;
-    /* flex: 0 1 15%; */
-    z-index: 1001;
-    min-height: 5vh;
-    max-width: 60rem;
-    width: 100%;
-    font-family: 'Avenir', 'Source Serif 4', serif;
-    /* text-decoration: underline; */
-    font-size: 2.5rem;
-    color: #eee;
 }
 
 .highlight {
@@ -589,6 +601,22 @@ textarea.input-style {
 
 .btn-soft:hover {
     background-color: #a4522f;
+}
+
+.btn-soft-disabled {
+    background-color: transparent;
+    /* Light gray background */
+    color: #B0B0B0;
+    /* Gray font color */
+    /* cursor: not-allowed; */
+    /* Change cursor to indicate disabled state */
+    border: 2px solid #B0B0B0;
+    /* Gray border */
+}
+
+.btn-soft-disabled:hover {
+    background-color: transparent;
+    /* Maintain gray background on hover */
 }
 
 .footer {

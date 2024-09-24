@@ -2,35 +2,75 @@
 <html>
 
 <head>
-    <title>Askan</title>
-    <meta name="description" content="Askan: ">
+    <!-- Reusable Section: Shared Across All Pages -->
+    <!-- Basic meta tags and resources that should be included everywhere -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="twitter:image" content="favicons/apple-touch-icon.png" />
-    <meta property="og:title" content="Askan" />
-    <meta property="og:url" content="https://askan.is" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/images/banner.webp" />
-    <meta property="og:description" content="Stay Ahead with Askan’s AI Compliance." />
+
+    <!-- Favicon and Manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#0B0C10">
+    <meta name="theme-color" content="#0B0C10">
+
+    <!-- CSS and Fonts (Used Globally) -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300&display=swap"
         rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9DMF2SQTV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-R9DMF2SQTV');
+    <!-- AOS and Cookie Consent (Shared Functionality) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- End of Reusable Section -->
+
+    <!-- Customizable Section: Unique Per Page -->
+    <!-- Specific meta tags, title, and schema for each individual page -->
+
+    <title>Request Access - Askan AI Compliance Solutions</title>
+    <meta name="description"
+        content="Request early access to Askan’s AI-driven regulatory compliance solutions for proactive horizon scanning and real-time insights.">
+
+    <!-- Open Graph and Twitter Meta Tags -->
+    <meta property="og:title" content="Request Access - Askan AI Compliance Solutions" />
+    <meta property="og:description"
+        content="Apply for early access to Askan’s cutting-edge compliance tools that empower financial institutions to manage regulatory challenges efficiently." />
+    <meta property="og:image" content="assets/images/banner.webp" />
+    <meta property="og:url" content="https://askan.is/request.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:image" content="assets/logo-askan-small.png" />
+
+    <!-- Page-specific structured data (Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Request Access - Askan AI Compliance Solutions",
+      "description": "Request early access to Askan’s AI-driven regulatory compliance solutions for proactive horizon scanning and real-time insights.",
+      "url": "https://askan.is/request.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Askan",
+        "url": "https://askan.is",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://askan.is/assets/logo-askan-small.png"
+        }
+      }
+    }
     </script>
-    <link rel="icon" type="image/svg+xml" href="https://askan.is/assets/favicon.svg">
-    <meta name="msapplication-TileColor" content="#0B0C10">
-    <meta name="theme-color" content="#0B0C10">
+
+    <!-- End of Customizable Section -->
+
 </head>
 
 
@@ -74,8 +114,6 @@
     </div>
 
     <div class="main">
-
-
         <div class="dual">
             <div class="vertical container" id="About">
                 <div class="right subtitle">Request Access</div>
@@ -92,15 +130,10 @@
                 </form>
             </div>
         </div>
-
-
-
-
-
-
         <div class="footer">
             <p class="footer-font">Copyright &copy; 2024 Askan. All rights reserved.</p>
         </div>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

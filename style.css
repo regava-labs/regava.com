@@ -923,7 +923,7 @@ blockquote {
 
 .cc-revoke,
 .cc-bottom {
-    display: none !important;
+    display: none;
 }
 
 .signup-form {

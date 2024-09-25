@@ -66,7 +66,7 @@ function loadGoogleAnalytics() {
 function initializeToggle() {
     const cookieToggle = document.getElementById("cookieToggle");
     const cookieStatus = document.getElementById("cookieStatus");
-    if (cookieToggle && cookieStatus) {
+    if (cookieToggle && cookieStatus && cookieConsentInstance) {
         cookieToggle.checked = cookieConsentInstance.hasConsented();
         updateStatusText(cookieStatus, cookieToggle.checked);
         cookieToggle.addEventListener("change", function () {
@@ -83,7 +83,7 @@ function initializeToggle() {
 function updateToggle() {
     const cookieToggle = document.getElementById("cookieToggle");
     const cookieStatus = document.getElementById("cookieStatus");
-    if (cookieToggle && cookieStatus) {
+    if (cookieToggle && cookieStatus && cookieConsentInstance) {
         cookieToggle.checked = cookieConsentInstance.hasConsented();
         updateStatusText(cookieStatus, cookieToggle.checked);
     }

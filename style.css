@@ -17,6 +17,8 @@ html {
     -webkit-box-sizing: inherit;
     -moz-box-sizing: inherit;
     box-sizing: inherit;
+            box-sizing: border-box;
+            /* Ensure padding and borders are included in width */
 }
 
 ::-webkit-scrollbar {
@@ -24,7 +26,7 @@ html {
 }
 
 body {
-    margin: 0;
+    margin: auto;
     min-height: 100%;
     background-color: #0B0C10;
     display: flex;
@@ -44,6 +46,29 @@ p {
     font-size: 1.3rem;
     color: #FFFFFF;
     /* max-width: 60rem; */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+sub {
+    font-size: 0.9rem;
+    color: #ccc;
+    font-family: 'Lora', serif;
+    border: 1px solid #ccc;
+    /* Thin border */
+    border-radius: 4px;
+    /* Rounded edges */
+    padding: 2px 4px;
+    /* Padding around the text for spacing */
+    display: inline-block;
+    /* Ensure it wraps around the text properly without expanding */
+    max-width: max-content;
+    /* Ensure the element width is as small as possible */
+    margin-bottom: 0.5rem;
+}
+
+.inline-link {
+    /* text-decoration: none; */
+    color: #C5C6C7;
 }
 
 /* DEBUG */
@@ -64,6 +89,8 @@ p {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.0);
     width: 100%;
+    max-width: 150rem;
+    margin: 0 auto;
 }
 
 .nav-item {
@@ -111,7 +138,7 @@ p {
     position: relative;
     background-color: rgba(255, 255, 255, 0.0);
     padding-top: 5vh;
-    max-width: 120rem;
+    max-width: 150rem;
     min-width: 60%;
     align-self: center;
 }
@@ -119,8 +146,8 @@ p {
 .dual {
     display: flex;
     /* align-items: center; */
-    flex-wrap: wrap;
-    width: 80%;
+    flex-wrap: nowrap;
+    width: 90%;
     /* margin: 10px; */
 }
 
@@ -175,7 +202,25 @@ h1 {
     color: #FFFFFF;
 }
 
-.subtitle {
+.logo-text {
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 400;
+    /* max-width: 60rem; */
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33); */
+}
+
+/* h2 {
+    font-family: 'Avenir',
+        'Source Sans Pro',
+        sans-serif;
+    font-weight: 50;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #FFFFFF;
+} */
+
+h2, .subtitle {
     display: flex;
     text-align: stretch;
     /* flex: 0 1 15%; */
@@ -187,6 +232,26 @@ h1 {
     /* text-decoration: underline; */
     font-size: 2.5rem;
     color: #eee;
+    font-weight: 400;
+    margin: 0;
+}
+
+.lava-text {
+    font-weight: bold;
+    background: linear-gradient(to right,
+            #d97745, #e87e4b, #f08c5a, #f5a068, #f4b27a, #d97745);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: lava-flow 10s linear infinite;
+    /* text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33); */
+}
+
+@keyframes lava-flow {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .highlight {
@@ -195,19 +260,20 @@ h1 {
 
 .container {
     display: flex;
-    /* flex: 1 1 auto; */
-    flex: 45%;
+    flex: 1 1 auto;
+    /* flex: 45%; */
     /* max-height: 60vh; */
     min-height: 25rem;
     border-radius: 2rem;
     padding: 10%;
     z-index: 1001;
-    width: 80%;
-    min-width: 20rem;
+    width: 100%;
+    /* height: 100%; */
+    /* min-width: 10rem; */
     padding: 30px;
     padding-left: 4rem;
     padding-right: 4rem;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     margin: 10px;
     box-sizing: border-box;
     transition: background-color 1s ease;
@@ -221,8 +287,9 @@ h1 {
     flex-direction: column;
     align-items: left;
     align-content: center;
-    justify-content: center;
-    /* flex-grow: 1; */
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-top: 3%;
 }
 
 .odd {
@@ -230,9 +297,22 @@ h1 {
     -webkit-backdrop-filter: blur(30px);
 }
 
+/* New classes for precise sizing */
+.flex-1-3 {
+    flex: 0 0 calc(33.333% - 20px);
+    /* Subtracting margin */
+    width: calc(33.333% - 20px);
+}
+
+.flex-2-3 {
+    flex: 0 0 calc(66.666% - 20px);
+    /* Subtracting margin */
+    width: calc(66.666% - 20px);
+}
+
 .bgimage {
     /* Background Image */
-    background-image: url('assets/image.png');
+    background-image: url('assets/image.jpg');
     /* Add your image path here */
     background-size: cover;
     background-position: center;
@@ -240,7 +320,7 @@ h1 {
 }
 
 .img2 {
-    background-image: url('assets/image2.png');
+    background-image: url('assets/image2.jpg');
 }
 
 /* .right {
@@ -300,10 +380,22 @@ li {
 
 @media (max-width: 48em) {
     .nav-list {
-        flex-direction: column;
-        margin-left: auto;
-        align-items: flex-end
-    }
+            flex-direction: column;
+            /* Stack items vertically */
+            width: 100%;
+            /* Ensures full width for smaller screens */
+            margin: 0;
+            /* Resets the auto margin */
+            align-items: flex-end;
+            /* Align items to the left */
+        }
+    
+        .nav-item {
+            margin-left: 0.1rem;
+            /* Reset margin to prevent extra space */
+            margin-bottom: 0.1rem;
+            /* Add some spacing between items */
+        }
 
     .flex-grid-thirds {
         display: flex;
@@ -339,6 +431,9 @@ li {
 
     .member-info {
         margin-left: 0;
+    }
+    sub {
+        margin-top: 0.5rem;
     }
 }
 
@@ -411,7 +506,7 @@ img {
 .member-info h3 {
     margin: 0;
     font-size: 1.5rem;
-    color: #C5C6C7;
+    color: #ddd;
     /* Highlight color for name */
 }
 
@@ -425,6 +520,7 @@ img {
 .member-info p {
     margin-top: 1rem;
     font-size: 1rem;
+    font-weight: 500;
 }
 
 form {
@@ -456,24 +552,80 @@ textarea.input-style {
     resize: none;
 }
 
+/* Ensure that the <a> tag wraps tightly around the button */
+.btn-link {
+    display: inline-block;
+    width: fit-content;
+    /* This ensures the anchor takes only as much width as its content */
+}
+
 .btn-submit {
     background-color: #a4522f;
     color: white;
     cursor: pointer;
     transition: background 0.3s ease;
     border: none;
-    border-radius: 5px;
+    text-decoration: none;
+    border-radius: 20px;
     padding: 0.8rem 1.2rem;
     width: 100%;
     max-width: 10rem;
     margin-top: 1rem;
     font-size: 1rem;
+    display: inline-block;
+    /* Add this line */
 }
 
 .btn-submit:hover {
     background-color: #863c29;
 }
 
+
+/* container for two buttons side by side in flexbox */
+.btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-soft {
+    background-color: transparent;
+    /* Set background to transparent */
+    color: #E2F6F8;
+    /* Match font color to the border */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: 2px solid #E2F6F8;
+    /* Specify the border color and thickness */
+    text-decoration: none;
+    /* Removes the underline */
+    border-radius: 20px;
+    padding: 0.8rem 1.2rem;
+    width: 100%;
+    max-width: 10rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.btn-soft:hover {
+    background-color: #a4522f;
+}
+
+.btn-soft-disabled {
+    background-color: transparent;
+    /* Light gray background */
+    color: #B0B0B0;
+    /* Gray font color */
+    /* cursor: not-allowed; */
+    /* Change cursor to indicate disabled state */
+    border: 2px solid #B0B0B0;
+    /* Gray border */
+}
+
+.btn-soft-disabled:hover {
+    background-color: transparent;
+    /* Maintain gray background on hover */
+}
 
 .footer {
     display: flex;
@@ -505,7 +657,8 @@ textarea.input-style {
 }
 
 .gradient-body {
-    background-color: #E2F6F8;
+    /* background-color: #E2F6F8; */
+    background-color: rgba(226, 246, 248, 0.6);
     position: absolute;
     inset: 0;
     display: flex;
@@ -696,4 +849,183 @@ textarea.input-style {
     /* Tomato color */
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
     z-index: -1;
+}
+
+blockquote {
+    color: #ccc;
+}
+
+@media (max-width: 56em) {
+    .dual {
+        flex-direction: column;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .dual .container,
+    .dual .bgimage {
+        width: 100%;
+        padding: 2rem 2;
+    }
+}
+
+@media (max-width: 70em) {
+    .dual {
+        flex-wrap: wrap;
+    }
+}
+
+.cc-window {
+    width: 100%;
+    /* Full width of the screen */
+    /* max-width: 600px; */
+    /* Limit the maximum width of the banner */
+    text-align: center;
+    /* Center text and buttons horizontally */
+    display: flex;
+    /* Use flexbox for centering */
+    flex-direction: column;
+    /* Stack the elements vertically */
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    padding: 1rem;
+    /* Add padding */
+    position: fixed;
+    /* Fix the banner at the bottom */
+    bottom: 0;
+    /* Stick the banner to the bottom */
+    /* left: 50%; */
+    /* Center horizontally */
+    /* transform: translateX(-50%); */
+    /* Properly center the banner */
+    background-color: #0B0C10;
+    margin: auto;
+    /* Ensure the background is consistent */
+}
+
+.cc-message {
+    /* Limit the width of the message text */
+    max-width: 75%;
+    /* margin-bottom: 1rem; */
+    /* Add space below the message */
+}
+
+.cc-btn {
+    margin: 0.5rem;
+    /* Add space between buttons */
+    padding: 0.8rem 1.5rem;
+    /* Adjust padding for better button sizing */
+}
+
+.cc-revoke,
+.cc-bottom {
+    display: none;
+}
+
+.signup-form {
+    margin-top: 20px;
+}
+
+/* Input container to handle floating labels */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-style {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+/* Style for the label, initially in the input field */
+.input-label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 16px;
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+/* Move label above the input when focused or input is filled */
+.input-style:focus+.input-label,
+.input-style:not(:placeholder-shown)+.input-label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Input focus style for better visibility */
+.input-style:focus {
+    border-color: #a4522f;
+    outline: none;
+}
+
+.footer-link {
+    /* color: #f4b27a; */
+    color: #fafafa;
+    /* Matches the design colors */
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #f4b27a;
+    /* Darker color on hover */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #a4522f;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
 }

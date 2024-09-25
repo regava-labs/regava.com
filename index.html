@@ -1,39 +1,81 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Askan</title>
-    <meta name="description" content="Askan">
+    <!-- Reusable Section: Shared Across All Pages -->
+    <!-- Basic meta tags and resources that should be included everywhere -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="twitter:image" content="assets/favicon.svg" />
-    <meta property="og:title" content="Askan" />
-    <meta property="og:url" content="https://askan.is" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/images/banner.webp" />
-    <meta property="og:description"
-        content="Stay Ahead with Askan’s AI Compliance." />
+
+    <!-- Favicon and Manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#0B0C10">
+    <meta name="theme-color" content="#0B0C10">
+
+    <!-- CSS and Fonts (Used Globally) -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300&display=swap"
         rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9DMF2SQTV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
 
-        gtag('config', 'G-R9DMF2SQTV');
+    <!-- AOS and Cookie Consent (Shared Functionality) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- End of Reusable Section -->
+
+    <!-- Customizable Section: Unique Per Page -->
+    <!-- Specific meta tags, title, and schema for each individual page -->
+
+    <title>Askan - AI-Driven Regulatory Compliance Solutions</title>
+    <meta name="description"
+        content="Askan offers AI-powered regulatory compliance tools for the finance sector, providing real-time insights and proactive horizon scanning.">
+
+    <!-- Open Graph and Twitter (Customizable per page) -->
+    <meta property="og:title" content="Askan" />
+    <meta property="og:description" content="Stay Ahead with Askan’s AI Compliance." />
+    <meta name="twitter:image" content="assets/logo-askan-small.png" />
+    <meta property="og:url" content="https://askan.is" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:image" content="assets/logo-askan-small.png" />
+
+    <!-- Page-specific structured data (Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Askan",
+      "url": "https://askan.is",
+      "logo": "https://askan.is/assets/logo-askan-small.png",
+      "description": "AI-driven regulatory compliance solutions.",
+      "founders": [
+        {
+            "@type": "Person",
+            "name": "Arinbjörn Kolbeinsson",
+            "jobTitle": "Co-Founder",
+            "url": "https://arinbjorn.is",
+            "sameAs": "https://linkedin.com/in/arinbjorn"
+        },
+        {
+            "@type": "Person",
+            "name": "Benedikt Kolbeinsson",
+            "jobTitle": "Co-Founder",
+            "url": "https://benediktkolbeinsson.is",
+            "sameAs": "https://www.linkedin.com/in/benedikt/"
+        }
+      ]
+    }
     </script>
-    <!-- <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"> -->
-    <link rel="icon" type="image/svg+xml" href="https://askan.is/assets/favicon.svg">
-    <!-- <link rel="icon" type="image/png" href="assets/favicon/favicon.png"> -->
-    <meta name="msapplication-TileColor" content="#0B0C10">
-    <meta name="theme-color" content="#0B0C10">
+    <!-- End of Customizable Section -->
+
 </head>
 
 
@@ -41,7 +83,7 @@
     <nav>
         <ul class="nav-list">
             <li class="nav-item">
-                <a href="index.html" class="k01">
+                <a href="index.html" class="k01 active">
                     𝌭 Askan
                 </a>
             </li>
@@ -54,6 +96,9 @@
             <li class="nav-item">
                 <a href="product.html">Product</a>
             </li>
+            <!-- <li class="nav-item">
+                <a href="consulting.html">Consulting</a>
+            </li> -->
             <li class="nav-item">
                 <a href="request.html">Request access</a>
             </li>
@@ -78,33 +123,34 @@
         <!-- <div class="title k01"></div> -->
 
         <div class="title">
-            <!-- <div class="flex-item">
-                <img src="assets/images/avatar.webp" alt="Profile of Arinbjörn Kolbeinsson">
-                
-            </div> -->
-            <!-- <div class="prefix">Hi, I'm</div> -->
             <h1>𝌭
-                <!-- <br> -->
                 Askan</h1>
-            <!-- <div class="suffix">PhD MRes MEng ACGI</div> -->
-            <!-- <h1 class="logo">K01</h1> -->
-            <p>At Askan, we're redefining regulatory compliance through AI-driven solutions. 
-                <br><br>Led by a team of PhDs from Imperial College London, our tools provide proactive
-            horizon scanning, ensuring your business stays ahead of regulatory changes and risks.
-            </p>
+            <div class="logo-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+                At Askan, we’re <span class="lava-text">transforming regulatory compliance</span> with AI-driven solutions.
+                <br><br>Led by PhDs from Imperial College London, we combine <span class="lava-text">proactive horizon
+                    scanning</span> with <span class="lava-text">regulatory analysis</span> to keep your business ahead of the curve.
+            </div>
+            <div class="btn-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <a href="request.html" class="btn-link">
+                <button type="submit" class="btn-soft">Request access</button>
+            </a>
+            <!-- <a href="request.html" class="btn-link">
+                <button type="submit" class="btn-soft">Learn more</button>
+            </a> -->
+            </div>
         </div>
 
         <!-- <div class="vertical container" id="About">
         
       </div> -->
 
-            <div class="dual">
+            <div class="dual" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <div class="vertical container" id="About">
-                    <div class="right subtitle">Our work</div>
-                    <p>We specialize in creating AI-driven regulatory compliance solutions tailored for the finance sector. Our innovative
+                    <h2 class="right">Our work</h2>
+                    <p>We specialise in creating AI-driven regulatory compliance solutions tailored for the finance sector. Our innovative
                     platform intelligently navigates complex financial regulations, providing proactive horizon scanning and real-time
                     compliance insights. Through our work, we empower financial institutions to manage regulatory challenges efficiently,
-                    ensuring compliance, operational excellence, and strategic foresight.</p>
+                    ensuring compliance, operational excellence and strategic foresight.</p>
                 </div>
             </div>
 
@@ -126,30 +172,31 @@
                 </div>
             </div> -->
 
-        <div class="dual">
-            <div class="vertical container odd" id="Team">
-                <div class="subtitle">Team</div>
+        <div class="dual" id="Team" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="vertical container odd">
+                <h2>Team</h2>
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="assets/images/arinbjorn.webp" alt="Arinbjörn Kolbeinsson">
+                        <img src="assets/images/arinbjorn.webp" alt="Arinbjörn Kolbeinsson, PhD, AI expert at Askan">
                     </div>
                     <div class="member-info">
                         <h3>Dr. Arinbjörn Kolbeinsson</h3>
                         <h4>Co-founder</h4>
-                        <p>A machine learning expert with a PhD from Imperial College London. Experience includes Evidation Health, Samsung AI and a visiting scholar position at the University of
-                        Virginia. He has published over 20 academic papers
-                        and now studies law at the University of Iceland in his spare time.</p>
+                        <p>A machine learning expert with a PhD in deep learning from Imperial College London, with experience at Evidation Health, Samsung AI and
+                        as a visiting scholar at the University of Virginia. He has published over 20 academic papers and holds a BA in law from
+                        the University of Iceland, solidifying his dual expertise in AI and law.</p>
                     </div>
                 </div>
                 <div class="team-member">
                     <div class="member-photo">
-                        <img src="assets/images/benedikt.jpg" alt="Benedikt Kolbeinsson">
+                        <img src="assets/images/benedikt.jpg" alt="Benedikt Kolbeinsson, PhD, AI expert at Askan">
                     </div>
                     <div class="member-info">
                         <h3>Benedikt Kolbeinsson</h3>
                         <h4>Co-founder</h4>
-                        <p> A final-year PhD student at Imperial College London. Benedikt lead Imperial’s team to victory in Huawei’s AI competition. His experience includes working as a research scientist at Deepair and for the Icelandic COVID-19
-                            Vaccine Taskforce and he previously interned at LOGOS legal services.</p>
+                        <p> A final-year PhD student at Imperial College London. Benedikt lead Imperial’s team to victory in Huawei’s AI competition. His experience includes working as a research scientist at Deepair and contributing to the Icelandic COVID-19 Vaccine
+                        Taskforce. With a strong background in both AI and legal services from his internship at LOGOS legal, Benedikt combines
+                        technical expertise with a practical understanding of the legal industry’s challenges.</p>
                     </div>
                 </div>
             </div>
@@ -158,60 +205,67 @@
 
 
         <div class="dual">
-            <div class="vertical container odd" id="Art">
-                <div class="subtitle">Navigating Regulations with AI</div>
+            <div class="vertical container odd" id="Art" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <sub>Product</sub>
+                <h2>Askan Intelligence</h2>
                 <p>Streamline complex regulatory landscapes with our advanced AI solutions. Achieve seamless compliance, minimize
-                operational risks, and stay ahead of regulatory changes with ease.</p>
+                operational risks and stay ahead of regulatory changes with ease.</p>
+                <a href="product.html" class="btn-link">
+                    <button class="btn-submit">Learn more</button>
+                </a>
             </div>
-            <div class="vertical container odd bgimage img2">
+            <div class="vertical container odd bgimage img2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="subtitle"></div>
-                <!-- <p>My work focuses on developing machine learning methods that learn from high-dimensional biomedical data including genetic,
-                  brain MRI and hospital diagnosis data for personalised health outcome prediction.</p> -->
-        
             </div>
         </div>
 
         <div class="dual">
-            <div class="vertical container odd" id="Art">
-                <div class="subtitle">Compliance Co-pilot</div>
-                <p>Revolutionize your compliance strategy with our co-pilot. Enhance customer experiences while ensuring top-tier
-                regulatory adherence.</p>
-                <a href="product.html"><button class="btn-submit">Learn more</button></a>
+            <div class="vertical container odd" id="Art" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <sub>Product</sub>
+                <h2>Horizon</h2>
+                <p>Horizon scans the regulatory landscape, using Askan’s proprietary AI models to monitor and analyze upcoming changes.
+                Tailored alerts keep your firm ahead of compliance challenges, making adherence effortless.</p>
+                <a href="product.html" class="btn-link">
+                    <button class="btn-submit">Learn more</button>
+                </a>
             </div>
-            <div class="vertical container odd">
-                <div class="subtitle">Insights across sectors</div>
-                <!-- <p>My work focuses on developing machine learning methods that learn from high-dimensional biomedical data including genetic,
-                          brain MRI and hospital diagnosis data for personalised health outcome prediction.</p> -->
-        
-                <p>Unlock transformative insights with AI-driven compliance solutions tailored for diverse sectors. Maintain a competitive
-                edge and ensure strategic, compliant operations in a rapidly evolving market.</p>
+            <div class="vertical container odd" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <sub>Research</sub>
+                <h2>Driving Innovation in AI+Law</h2>
+                <p>At Askan, our research pushes the boundaries of AI in the legal sector. We are shaping the future of AI-driven legal solutions through cutting-edge studies and real-world
+                    applications.</p>
+                    <!-- italic text --> 
+                     <p><i>Coming soon.</i></p>
+                <!-- <div class="btn-link">
+                    <button class="btn-soft btn-soft-disabled">Coming soon</button>
+                </div> -->
             </div>
         </div>
 
         <div class="dual">
-            <div class="vertical container odd bgimage" id="Art">
+            <div class="vertical container odd bgimage" id="Art" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="subtitle"></div>
   
             </div>
-            <div class="vertical container odd">
-                <div class="subtitle">Get Started</div>
-                <!-- <ul> -->
-                    <!-- <li> -->
-                        <a href="request.html">
-                        <button type="submit" class="btn-submit">Request access</button>
-                        </a>
-                    <!-- </li> -->
-                <!-- </ul> -->
+            <div class="vertical container odd" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h2>Get Started</h2>
+                <p>Discover how Askan transform your approach to compliance. Contact us today
+                    for a personalised demo and see how our tools can help your business thrive in a complex regulatory
+                    environment.</p>
+                <a href="request.html" class="btn-link">
+                    <button type="submit" class="btn-submit">Request access</button>
+                </a>
             </div>
         </div>
 
-
-
-
-
-    <div class="footer">
-        <p class="footer-font">Copyright &copy; 2024 Askan. All rights reserved.</p>
+    <div class="footer" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="0">
+        <p class="footer-font">
+            Copyright &copy; 2024 Askan. All rights reserved. <a href="privacy-policy.html" class="footer-link">Privacy policy</a>.<br>
+            Askan Limited is a company registered in
+            England and Wales (No. 15885460).
+        </p>
     </div>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

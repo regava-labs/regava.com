@@ -113,26 +113,44 @@
         <div class="gradient gradient-body gradient-seven"></div> -->
     </div>
 
-    <div class="main">
-        <div class="dual">
-            <div class="vertical container" id="About">
-                <div class="right subtitle">Request Access</div>
-                <form action="https://formspree.io/f/mdoqredy" method="POST">
-                    <!-- <p>Apply for early access to Askan's leading compliance tools</p> -->
-                    <label>
-                        <input type="email" name="email" class="input-style" placeholder="Email" required>
-                    </label>
-                    <label>
-                        <!-- Company name: -->
-                        <input type="text" name="company" class="input-style" placeholder="Company name" required>
-                    </label>
-                    <button type="submit" class="btn-submit">Send</button>
-                </form>
-            </div>
+<div class="main">
+    <div class="dual">
+        <div class="vertical container" id="About">
+            <h1 class="right subtitle">Request Access</h1>
+            <p class="description">Sign up for early access to Askan's AI-driven compliance tools. Stay ahead with our
+                real-time insights and proactive horizon scanning.</p>
+
+            <!-- Form with Floating Labels -->
+            <form action="https://formspree.io/f/mdoqredy" method="POST" class="signup-form">
+                <div class="input-container">
+                    <input type="text" name="name" class="input-style" placeholder=" ">
+                    <label class="input-label">Name (optional)</label>
+                </div>
+                <!-- Email Input Field with Floating Label -->
+                <div class="input-container">
+                    <input type="email" name="email" class="input-style" placeholder=" " required>
+                    <label class="input-label">Email</label>
+                </div>
+
+                <!-- Company Name Input Field with Floating Label -->
+                <div class="input-container">
+                    <input type="text" name="company" class="input-style" placeholder=" " required>
+                    <label class="input-label">Company name</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Request Early Access</button>
+            </form>
         </div>
+    </div>
         <div class="footer">
-            <p class="footer-font">Copyright &copy; 2024 Askan. All rights reserved.</p>
+            <p class="footer-font">
+                Copyright &copy; 2024 Askan. All rights reserved. <a href="privacy-policy.html" class="footer-link">Privacy
+                    policy</a>.<br>
+                Askan Limited is a company registered in
+                England and Wales (No. 15885460).
+            </p>
         </div>
+    </div>
     <script src="scripts/main.js"></script>
 </body>
 

@@ -66,6 +66,11 @@ sub {
     margin-bottom: 0.5rem;
 }
 
+.inline-link {
+    /* text-decoration: none; */
+    color: #C5C6C7;
+}
+
 /* DEBUG */
 /* .container, .item, .project{
   border-style: solid;
@@ -307,7 +312,7 @@ h2, .subtitle {
 
 .bgimage {
     /* Background Image */
-    background-image: url('assets/image.png');
+    background-image: url('assets/image.jpg');
     /* Add your image path here */
     background-size: cover;
     background-position: center;
@@ -315,7 +320,7 @@ h2, .subtitle {
 }
 
 .img2 {
-    background-image: url('assets/image2.png');
+    background-image: url('assets/image2.jpg');
 }
 
 /* .right {
@@ -426,6 +431,9 @@ li {
 
     .member-info {
         margin-left: 0;
+    }
+    sub {
+        margin-top: 0.5rem;
     }
 }
 
@@ -901,7 +909,7 @@ blockquote {
 
 .cc-message {
     /* Limit the width of the message text */
-    max-width: 50%;
+    max-width: 75%;
     /* margin-bottom: 1rem; */
     /* Add space below the message */
 }
@@ -911,4 +919,113 @@ blockquote {
     /* Add space between buttons */
     padding: 0.8rem 1.5rem;
     /* Adjust padding for better button sizing */
+}
+
+.cc-revoke,
+.cc-bottom {
+    display: none !important;
+}
+
+.signup-form {
+    margin-top: 20px;
+}
+
+/* Input container to handle floating labels */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-style {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+/* Style for the label, initially in the input field */
+.input-label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 16px;
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+/* Move label above the input when focused or input is filled */
+.input-style:focus+.input-label,
+.input-style:not(:placeholder-shown)+.input-label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Input focus style for better visibility */
+.input-style:focus {
+    border-color: #a4522f;
+    outline: none;
+}
+
+.footer-link {
+    /* color: #f4b27a; */
+    color: #fafafa;
+    /* Matches the design colors */
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #f4b27a;
+    /* Darker color on hover */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #a4522f;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
 }

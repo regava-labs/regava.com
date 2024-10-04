@@ -26,12 +26,6 @@ window.addEventListener("load", function () {
             "link": "Learn more.",
             "href": "privacy-policy.html"
         },
-        "elements": {
-            "messagelink": "<span id='cookieconsent:desc' style='text-align: center; font-size: 12px;' class='cc-message'>{{message}} <a aria-label='learn more about cookies' tabindex='0' href='{{href}}' target='_blank' class='cc-link'>{{link}}</a></span>",
-            "dismiss": "<a aria-label='dismiss cookie message' tabindex='0' class='cc-btn cc-dismiss btn-primary' style='border-radius: 20px; font-size:10px;'>{{dismiss}}</a>",
-            "allow": "<a aria-label='allow cookies' tabindex='0' class='cc-btn cc-allow' style='border-radius: 20px; font-size:10px;'>{{allow}}</a>",
-            "deny": "<a aria-label='deny cookies' tabindex='0' class='cc-btn cc-deny' style='border-radius: 20px; font-size:10px;'>{{deny}}</a>"
-        },
         "onInitialise": function (status) {
             cookieConsentInstance = this;
             var didConsent = this.hasConsented();
@@ -43,28 +37,56 @@ window.addEventListener("load", function () {
         "onStatusChange": function (status, chosenBefore) {
             var didConsent = this.hasConsented();
             if (didConsent) {
+                // Update consent to 'granted' when user accepts
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'analytics_storage': 'granted'
+                });
                 loadGoogleAnalytics();
-                // cookieConsentInstance.setStatus('allow');  // Ensure that it sets the consent status properly
             } else {
-                // cookieConsentInstance.setStatus('deny');
+                // Update consent to 'denied' when user declines
+                gtag('consent', 'update', {
+                    'ad_storage': 'denied',
+                    'analytics_storage': 'denied'
+                });
             }
             updateToggle();
         }
     });
 });
 
+
+// Fallback definition for gtag to avoid "gtag is not defined" error before Google Analytics script loads
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+
 function loadGoogleAnalytics() {
+    // Set default consent state to 'denied'
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+    });
+
+    // Load Google Analytics script
     var gtagScript = document.createElement('script');
     gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-R9DMF2SQTV";
     gtagScript.async = true;
     document.head.appendChild(gtagScript);
+
     gtagScript.onload = function () {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-        gtag('config', 'G-R9DMF2SQTV');
+
+        // If user has consented, update the consent state
+        if (cookieConsentInstance && cookieConsentInstance.hasConsented()) {
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
+            });
+        }
     };
 }
+
+
 
 function initializeToggle() {
     const cookieToggle = document.getElementById("cookieToggle");

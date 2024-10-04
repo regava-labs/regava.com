@@ -44,6 +44,9 @@ window.addEventListener("load", function () {
             var didConsent = this.hasConsented();
             if (didConsent) {
                 loadGoogleAnalytics();
+                // cookieConsentInstance.setStatus('allow');  // Ensure that it sets the consent status properly
+            } else {
+                // cookieConsentInstance.setStatus('deny');
             }
             updateToggle();
         }

@@ -921,10 +921,16 @@ blockquote {
     /* Adjust padding for better button sizing */
 }
 
-.cc-revoke,
-.cc-bottom {
+.cc-revoke
+/* .cc-bottom  */
+{
     display: none !important;
 }
+
+/* .cc-banner {
+    z-index: 9999 !important;
+    /* Ensure the banner is on top */
+} */
 
 .signup-form {
     margin-top: 20px;

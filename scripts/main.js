@@ -75,6 +75,7 @@ function loadGoogleAnalytics() {
 
     gtagScript.onload = function () {
         gtag('js', new Date());
+        gtag('config', 'G-R9DMF2SQTV'); // Add this line
 
         // If user has consented, update the consent state
         if (cookieConsentInstance && cookieConsentInstance.hasConsented()) {
@@ -117,3 +118,10 @@ function updateToggle() {
 function updateStatusText(statusElement, isEnabled) {
     statusElement.innerHTML = isEnabled ? "Cookies are <strong>enabled</strong>." : "Cookies are <strong>disabled</strong>.";
 }
+
+gtagScript.onload = function () {
+    console.log('GA script loaded');
+    gtag('js', new Date());
+    gtag('config', 'G-R9DMF2SQTV');
+    console.log('GA initialized');
+};

@@ -277,6 +277,7 @@ h2, .subtitle {
     margin: 10px;
     box-sizing: border-box;
     transition: background-color 1s ease;
+
 }
 
 .smallcontainer {
@@ -295,6 +296,11 @@ h2, .subtitle {
 .odd {
     background-color: rgba(0.75, 0.75, 0.75, .15);
     -webkit-backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* border-radius: 24px; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 /* New classes for precise sizing */
@@ -559,12 +565,9 @@ textarea.input-style {
     /* This ensures the anchor takes only as much width as its content */
 }
 
-.btn-submit {
-    background-color: #a4522f;
+/* .btn-submit {
     color: white;
     cursor: pointer;
-    transition: background 0.3s ease;
-    border: none;
     text-decoration: none;
     border-radius: 20px;
     padding: 0.8rem 1.2rem;
@@ -573,11 +576,74 @@ textarea.input-style {
     margin-top: 1rem;
     font-size: 1rem;
     display: inline-block;
-    /* Add this line */
+    
+    background: rgba(164, 82, 47, 1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+} */
+
+.btn-submit,
+.btn-soft {
+    /* Base styling */
+    padding: 12px 32px;
+    border-radius: 100px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+    position: relative;
+    /* For pseudo-element positioning */
+
+    /* Main background */
+    background: rgb(164, 82, 47);
+
+    /* Creating the gradient border effect */
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    /* Ensures background doesn't show under transparent border */
+
+    /* Gradient border using pseudo-element */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: inherit;
+        /* Match parent's border radius */
+        padding: 1px;
+        /* Border width */
+        background: linear-gradient(180deg,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.1) 30%,
+                rgba(255, 255, 255, 0.05) 100%);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+
+    /* Subtle shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.btn-submit:hover {
-    background-color: #863c29;
+/* Hover state */
+.btn-submit:hover,
+.btn-soft:hover {
+    /* transform: translateY(-1px); */
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 8px 16px rgba(0, 0, 0, 0.1),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
 }
 
 
@@ -588,13 +654,13 @@ textarea.input-style {
 }
 
 .btn-soft {
-    background-color: transparent;
+    /* background-color: transparent; */
     /* Set background to transparent */
     color: #E2F6F8;
     /* Match font color to the border */
     cursor: pointer;
     transition: background 0.3s ease;
-    border: 2px solid #E2F6F8;
+    /* border: 2px solid #E2F6F8; */
     /* Specify the border color and thickness */
     text-decoration: none;
     /* Removes the underline */

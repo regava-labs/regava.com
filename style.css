@@ -172,6 +172,10 @@ sub {
     flex-direction: column;
 }
 
+.logo {
+    font-family: comfortaa;
+}
+
 .smalltitle {
     min-height: 25vh;
 }
@@ -455,7 +459,7 @@ img {
 }
 
 .k01 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .logo {

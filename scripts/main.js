@@ -19,6 +19,33 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+    
+    // Mobile navigation toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navList = document.getElementById('nav-list');
+    
+    if (navToggle && navList) {
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
+            navList.classList.toggle('nav-open');
+        });
+        
+        // Close menu when clicking on a nav item
+        document.querySelectorAll('.nav-item a').forEach(link => {
+            link.addEventListener('click', function() {
+                navToggle.classList.remove('active');
+                navList.classList.remove('nav-open');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navToggle.contains(e.target) && !navList.contains(e.target)) {
+                navToggle.classList.remove('active');
+                navList.classList.remove('nav-open');
+            }
+        });
+    }
 });
 
 let cookieConsentInstance;

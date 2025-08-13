@@ -83,28 +83,37 @@
 
 <body>
     <nav>
-        <ul class="nav-list">
-            <li class="nav-item">
+        <div class="nav-container">
+            <div class="nav-brand">
                 <a href="index.html" class="k01 active">
                     𝌭&nbsp;Regava
                 </a>
-            </li>
-            <li class="nav-item">
-                <a href="product.html">Platform</a>
-            </li>
-            <li class="nav-item">
-                <a href="index.html#research">Research</a>
-            </li>
-            <li class="nav-item">
-                <a href="index.html#Team">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a href="request.html">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://beta.regava.com">Sign in</a>
-            </li>
-        </ul>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </div>
+            
+            <ul class="nav-list" id="nav-list">
+                <li class="nav-item">
+                    <a href="product.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#research">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#Team">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="request.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://beta.regava.com">Sign in</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <div class="background">
@@ -122,17 +131,29 @@
         <!-- <div class="title k01"></div> -->
 
         <!-- Hero Section -->
-        <div class="title">
-            <h1 style="font-family: comfortaa;">𝌭 Regava</h1>
-            <div class="logo-text" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
-                <span class="lava-text">Accelerate business development</span> with AI-powered regulatory intelligence that turns compliance into competitive advantage.
-                <br><br>
-                Launch products faster, expand markets confidently and stay ahead of regulatory changes before they impact your business.
+        <div class="hero-section">
+            <!-- Company Name - Centered at Top -->
+            <div class="hero-brand-center" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
+                <h1 style="font-family: comfortaa;">𝌭 Regava</h1>
             </div>
-            <div class="btn-container" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="0">
-            <a href="request.html" class="btn-link">
-                <button type="submit" class="btn-soft">Schedule Demo</button>
-            </a>
+            
+            <!-- Main Content - Full Width -->
+            <div class="hero-content-full" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">
+                <div class="hero-headline">
+                    <h2 class="hero-main-text">
+                        <span class="lava-text">Transforming how financial institutions handle compliance</span>
+                    </h2>
+                </div>
+                
+                <div class="hero-subtitle">
+                    <p>We're building the future of regulatory intelligence and redefining compliance as a driver of growth.</p>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="request.html" class="btn-link">
+                        <button type="submit" class="btn-soft">Schedule Demo</button>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -140,32 +161,28 @@
         <section class="section-container" data-aos="fade-in" data-aos-duration="1000">
             <div class="text-center">
                 <h2>Why Leading Financial Institutions Choose Regava</h2>
-                <p style="font-size: 1.1rem; color: #C5C6C7; max-width: 600px; margin: 0 auto 3rem;">Transform compliance from cost center to competitive advantage with measurable business results.</p>
+                <p style="font-size: 1.1rem; color: #C5C6C7; max-width: 600px; margin: 0 auto 3rem;">Position compliance as a competitive differentiator with measurable business results.</p>
             </div>
             
             <div class="benefits-grid">
                 <div class="glass-card">
-                    <div class="stat-number">3x</div>
                     <h3>Faster Business Development</h3>
                     <p>Accelerate product launches and market expansion by staying ahead of regulatory requirements instead of reacting to them.</p>
                 </div>
                 
                 <div class="glass-card">
-                    <div class="stat-number">60%</div>
                     <h3>Reduced Compliance Costs</h3>
                     <p>Cut compliance overhead through automated monitoring and intelligent risk assessment.</p>
                 </div>
                 
                 <div class="glass-card">
-                    <div class="stat-number">100%</div>
                     <h3>Zero Missed Deadlines</h3>
-                    <p>Proactive alerts ensure you never miss critical regulatory changes or compliance deadlines again.</p>
+                    <p>Proactive alerts ensure you never miss critical regulatory changes or compliance deadlines.</p>
                 </div>
                 
                 <div class="glass-card">
-                    <div class="stat-number">90%</div>
                     <h3>Competitive Advantage</h3>
-                    <p>Turn compliance from cost center to business enabler. Be first to market while competitors catch up.</p>
+                    <p>Turn compliance from cost centre to business enabler. Be first to market while competitors catch up.</p>
                 </div>
             </div>
         </section>
@@ -174,7 +191,7 @@
         <section class="section-container" data-aos="fade-in" data-aos-duration="1000">
             <div class="text-center">
                 <h2>How Regava Works</h2>
-                <p style="font-size: 1.1rem; color: #C5C6C7; max-width: 600px; margin: 0 auto 3rem;">Three core capabilities that transform reactive compliance into proactive advantage.</p>
+                <p style="font-size: 1.1rem; color: #C5C6C7; max-width: 600px; margin: 0 auto 3rem;">Three core capabilities powered by proprietary systems purpose-built for regulatory compliance, not adapted from generic solutions.</p>
             </div>
             
             <div class="feature-grid">
@@ -185,7 +202,7 @@
                 
                 <div class="glass-card">
                     <h3>Control Center</h3>
-                    <p>Comprehensive overview dashboard provides complete visibility into your compliance landscape with intelligent prioritization and actionable insights.</p>
+                    <p>Comprehensive overview dashboard provides complete visibility into your compliance landscape with intelligent prioritisation and actionable insights.</p>
                 </div>
                 
                 <div class="glass-card">
@@ -204,28 +221,31 @@
         <!-- Research Section -->
         <section class="section-container" id="research" data-aos="fade-in" data-aos-duration="1000">
             <div class="text-center">
-                <h2>Research-Backed AI</h2>
-                <p style="font-size: 1.1rem; color: #C5C6C7; max-width: 600px; margin: 0 auto 3rem;">Our platform is built on peer-reviewed research and proven AI methodologies.</p>
+                <h2>Our Research</h2>
+                <p style="font-size: 1.1rem; color: #C5C6C7; max-width: 600px; margin: 0 auto 3rem;">We are at the forefront of compliance technology research, ensuring our solutions reflect the latest advancements and highest standards.</p>
             </div>
             
             <div class="feature-grid">
-                <div class="glass-card">
-                    <h4>NeurIPS 2023</h4>
-                    <h5>Automated Regulatory Compliance Monitoring using Large Language Models</h5>
-                    <p>Novel approach to real-time regulatory change detection and impact assessment.</p>
-                </div>
+                <a href="https://arxiv.org/abs/2407.06483" target="_blank" class="glass-card research-card">
+                    <h4>ICLR 2025</h4>
+                    <p style="color: #f4b27a; margin-bottom: 1rem; font-size: 0.9rem;">Main Track</p>
+                    <h5>Composable interventions for language models</h5>
+                    <p>Framework for studying how multiple AI interventions interact, featuring test-time methods for knowledge editing, model compression and machine unlearning with 310 different compositions.</p>
+                </a>
                 
-                <div class="glass-card">
-                    <h4>ICML 2023</h4>
-                    <h5>Cross-jurisdictional Legal Document Analysis with Transformer Models</h5>
-                    <p>Multi-jurisdiction regulatory analysis using state-of-the-art AI architectures.</p>
-                </div>
+                <a href="https://arxiv.org/abs/2501.00069" target="_blank" class="glass-card research-card">
+                    <h4>NeurIPS 2024</h4>
+                    <p style="color: #f4b27a; margin-bottom: 1rem; font-size: 0.9rem;">Workshop on Red Teaming GenAI</p>
+                    <h5>Adversarial Negotiation Dynamics in Generative Language Models</h5>
+                    <p>Head-to-head evaluation of language models in competitive contract negotiations, revealing vulnerabilities and informing model selection in adversarial legal contexts.</p>
+                </a>
                 
-                <div class="glass-card">
-                    <h4>AAAI 2024</h4>
-                    <h5>Proactive Risk Assessment in Financial Regulatory Compliance</h5>
-                    <p>AI-driven early warning systems for financial compliance risk management.</p>
-                </div>
+                <a href="https://openreview.net/forum?id=cHnpUBShJP" target="_blank" class="glass-card research-card">
+                    <h4>NeurIPS 2024</h4>
+                    <p style="color: #f4b27a; margin-bottom: 1rem; font-size: 0.9rem;">GenAI for Health: Potential, Trust and Policy Compliance</p>
+                    <h5>Position: Transparent Reporting for Healthcare GenAI</h5>
+                    <p>Standardised reporting framework for generative AI in healthcare, enhancing transparency, reproducibility and regulatory compliance for clinical applications.</p>
+                </a>
             </div>
         </section>
 

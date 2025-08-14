@@ -96,6 +96,7 @@ nav * {
 
 .nav-container {
     background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -107,6 +108,15 @@ nav * {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Fallback for browsers that don't support any backdrop-filter */
+@supports not ((backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))) {
+    .nav-container {
+        background: rgba(11, 12, 16, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
 }
 
 .nav-brand a {
@@ -318,12 +328,22 @@ h2, .subtitle {
 /* Glass Morphism Card System */
 .glass-card {
     background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     padding: 2rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Fallback for browsers that don't support any backdrop-filter */
+@supports not ((backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))) {
+    .glass-card {
+        background: rgba(30, 35, 45, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
 }
 
 .glass-card h3 {
@@ -379,12 +399,22 @@ h2, .subtitle {
 
 .glass-card-small {
     background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 1.5rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Fallback for browsers that don't support any backdrop-filter */
+@supports not ((backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))) {
+    .glass-card-small {
+        background: rgba(30, 35, 45, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    }
 }
 
 .glass-card-small h4 {
@@ -420,11 +450,21 @@ h2, .subtitle {
 
 .odd {
     background: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+}
+
+/* Fallback for browsers that don't support any backdrop-filter */
+@supports not ((backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px))) {
+    .odd {
+        background: rgba(30, 35, 45, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
 }
 
 .odd:hover {
@@ -620,10 +660,6 @@ ul {
     color: #fff;
 }
 
-li {
-    /* margin-bottom: 15px; */
-}
-
 .education-title {
     font-weight: bold;
 }
@@ -669,6 +705,7 @@ li {
         left: 0;
         right: 0;
         background: rgba(11, 12, 16, 0.95);
+        -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 16px;
@@ -879,6 +916,7 @@ form {
     display: flex;
     flex-direction: column;
     background-color: rgba(0.75, 0.75, 0.75, 0.15);
+    -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     padding: 2rem;
     border-radius: 1.3rem;
@@ -887,6 +925,15 @@ form {
     margin-top: 2rem;
     width: 100%;
     color: #fff;
+}
+
+/* Fallback for browsers that don't support any backdrop-filter */
+@supports not ((backdrop-filter: blur(30px)) or (-webkit-backdrop-filter: blur(30px))) {
+    form {
+        background-color: rgba(25, 30, 40, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
 }
 
 .input-style {
